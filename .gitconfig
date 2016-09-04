@@ -1,0 +1,59 @@
+[core]
+	excludesfile = /Users/mcsonka/.gitignore_global
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[user]
+	name = Miroslav Csonka
+	email = miroslav.csonka@gmail.com
+[push]
+	default = simple
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	required = true
+	clean = git-lfs clean -- %f
+[core]
+  editor = vim
+	autocrlf = input
+[rebase]
+  autosquash = true
+[color]
+  ui = true
+[mergetool "vimdiff"]
+  cmd = vimdiff -f $LOCAL $MERGED $REMOTE
+[merge]
+  tool = vimdiff
+[mergetool]
+  prompt = false
+	keepBackup = true
+[diff]
+  compactionHeuristic = true
+[blame]
+  date = short
+[help]
+  autocorrect = 1
+[grep]
+  lineNumber = true
+  patternType = extended
+[fetch]
+	prune = true
+[gitsh]
+  prompt = "%D %c%b%#%w"
+[pull]
+	rebase = true
+[commit]
+#	template = /Users/miroslavcsonka/dotfiles/.gitcommit
+	verbose = true
+[interactive]
+	diffFilter = diff-highlight
+[pager]
+	log = diff-highlight | less
+	show = diff-highlight | less
+	diff = diff-highlight | less
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[alias]
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
