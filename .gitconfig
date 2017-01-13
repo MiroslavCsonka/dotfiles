@@ -78,3 +78,10 @@
 	newHighlight = green bold 22
 [alias]
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	up = pull --rebase --autostash
+  br = branch
+  co = checkout
+  st = status
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 

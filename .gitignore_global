@@ -50,3 +50,5 @@ crashlytics-build.properties
 fabric.properties
 
 .rakeTasks
+
+.overcommit.yml
