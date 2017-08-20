@@ -81,6 +81,9 @@ source $ZSH/oh-my-zsh.sh
 #
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
+# https://robots.thoughtbot.com/how-to-use-arguments-in-a-rake-task
+unsetopt nomatch
+
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export GEM_HOME=$HOME/.gem
 export GEM_PATH=$HOME/.gem
