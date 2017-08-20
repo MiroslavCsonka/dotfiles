@@ -49,12 +49,12 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git bundler common-aliases compleat docker git-extras jira rails bgnotify git-it-on zsh-autosuggestions zsh-brew-services zsh-syntax-highlighting npm)
+plugins=(git bundler common-aliases compleat docker bgnotify git-extras rails git-it-on zsh-autosuggestions zsh-brew-services zsh-syntax-highlighting npm beamery)
 
 # User configuration
 
 export PATH="$PATH:/Users/mcsonka/.rvm/gems/ruby-2.3.0/bin:/Users/mcsonka/.rvm/gems/ruby-2.3.0@global/bin:/Users/mcsonka/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mcsonka/.rvm/bin"
-# export MANPATH="/usr/local/man:$MANPATH"
+export PATH="$PATH:/opt/local/bin/"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -92,28 +92,21 @@ export GEM_PATH=$HOME/.gem
 alias c="pbcopy"
 alias p="pbpaste"
 alias y="youtube-dl -i"
-alias vim="mvim -v"
 alias vimrc="vim ~/.vimrc"
 alias tmuxrc="vim ~/.tmux.conf"
 alias path="echo $PATH | tr -s ':' '\n'"
-eval "$(thefuck --alias)"
-export EDITOR="mvim -v"
 alias ggpf='git push origin $(current_branch) --force-with-lease'
 
-PATH="/Users/mcsonka/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/Users/mcsonka/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/Users/mcsonka/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/Users/mcsonka/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/Users/mcsonka/perl5"; export PERL_MM_OPT;
 COMPOSE_HTTP_TIMEOUT=1200
 
-alias nginx='sudo env rvm_trust_rvmrcs_flag=1 /usr/local/bin/nginx'
-alias stopnginx='sudo /usr/local/bin/nginx -s stop'
 alias e='eval $(docker-machine env default)'
+alias d='docker'
 alias dc='docker-compose'
+alias dm='docker-machine'
 alias ber='bundle exec rspec'
 alias berc='bundle exec rubocop'
 alias berca='bundle exec rubocop --auto-correct'
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 export PATH="/usr/local/sbin:$PATH"
 
 precmd() {
@@ -121,12 +114,19 @@ precmd() {
   echo -ne "\e]1;${PWD##*/}\a"
 }
 
-
-eval "$(fasd --init posix-alias zsh-hook)"
-[[ `docker-machine status` = "Running" ]] && eval $(docker-machine env default)
-
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="/usr/local/opt/v8-315/bin:$PATH"
 export PATH="/usr/local/opt/node@6/bin:$PATH"
 
 source ~/.custom_aliases
+export PATH="/usr/local/opt/qt@5.5/bin:$PATH"
+
+# https://github.com/shobhitpuri/git-refresh
+export PATH=$PATH:~/Projects/git-refresh
+
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+
+export PATH="/Users/mcsonka/Library/Python/2.7/bin:$PATH"
+
+. /Users/mcsonka/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
+
