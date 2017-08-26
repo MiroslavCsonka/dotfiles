@@ -70,6 +70,7 @@ plugins=(
   npm
   beamery
   vi-mode
+  git-it-on
 )
 
 # User configuration
