@@ -6,7 +6,7 @@ export ZSH=/Users/mcsonka/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="powerlevel9k/powerlevel9k"
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rvm vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rvm vcs vi_mode)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs time)
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9k_PROMPT_ADD_NEWLINE=true
@@ -54,7 +54,23 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=blue"
-plugins=(git bundler common-aliases compleat docker bgnotify git-extras rails git-it-on zsh-autosuggestions zsh-brew-services zsh-syntax-highlighting npm beamery)
+plugins=(
+  git
+  bundler
+  common-aliases
+  compleat
+  docker
+  bgnotify
+  git-extras
+  rails
+  git-it-on
+  zsh-autosuggestions
+  zsh-brew-services
+  zsh-syntax-highlighting
+  npm
+  beamery
+  vi-mode
+)
 
 # User configuration
 
