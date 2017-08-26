@@ -53,9 +53,6 @@ plugins=(git bundler common-aliases compleat docker bgnotify git-extras rails gi
 
 # User configuration
 
-export PATH="$PATH:/Users/mcsonka/.rvm/gems/ruby-2.3.0/bin:/Users/mcsonka/.rvm/gems/ruby-2.3.0@global/bin:/Users/mcsonka/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mcsonka/.rvm/bin"
-export PATH="$PATH:/opt/local/bin/"
-
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
@@ -88,7 +85,6 @@ export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export GEM_HOME=$HOME/.gem
 export GEM_PATH=$HOME/.gem
 
-
 alias c="pbcopy"
 alias p="pbpaste"
 alias y="youtube-dl -i"
@@ -114,7 +110,6 @@ precmd() {
   echo -ne "\e]1;${PWD##*/}\a"
 }
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="/usr/local/opt/v8-315/bin:$PATH"
 export PATH="/usr/local/opt/node@6/bin:$PATH"
 
@@ -128,5 +123,6 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 
 export PATH="/Users/mcsonka/Library/Python/2.7/bin:$PATH"
 
-. /Users/mcsonka/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
 
