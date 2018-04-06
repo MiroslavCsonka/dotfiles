@@ -47,6 +47,7 @@
 [diff]
   compactionHeuristic = true
   mnemonicprefix = true
+  colorMoved = dimmed_zebra
 [blame]
   date = short
 [help]
