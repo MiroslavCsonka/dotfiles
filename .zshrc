@@ -146,7 +146,7 @@ source ~/.custom_aliases
 export PATH="/usr/local/opt/qt@5.5/bin:$PATH"
 
 # https://github.com/shobhitpuri/git-refresh
-export PATH=$PATH:~/Projects/git-refresh
+export PATH="$PATH:$HOME/Projects/git-refresh"
 
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 
