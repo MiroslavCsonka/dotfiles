@@ -169,5 +169,7 @@ export HH_CONFIG=hicolor        # get more colors
 # AWS autocompletion
 source /Users/mcsonka/Library/Python/2.7/bin/aws_zsh_completer.sh
 
+source ~/.workrc
+
 export PGHOST=localhost
 export PGUSER=postgres
