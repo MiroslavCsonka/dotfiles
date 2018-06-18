@@ -129,6 +129,11 @@ alias berca='bundle exec rubocop --auto-correct'
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 export PATH="/usr/local/sbin:$PATH"
 
+if [ -d "$HOME/bin" ]; then
+  export PATH="$HOME/bin:$PATH"
+fi
+
+
 precmd() {
   # sets the tab title to current dir
   echo -ne "\e]1;${PWD##*/}\a"
