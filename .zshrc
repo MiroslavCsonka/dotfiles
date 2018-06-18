@@ -173,3 +173,5 @@ source ~/.workrc
 
 export PGHOST=localhost
 export PGUSER=postgres
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
