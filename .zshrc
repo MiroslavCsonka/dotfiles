@@ -77,6 +77,8 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+source ~/.secrets
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
