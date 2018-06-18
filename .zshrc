@@ -152,6 +152,7 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 
 export PATH="/Users/mcsonka/Library/Python/2.7/bin:$PATH"
 
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
